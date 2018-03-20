@@ -2,9 +2,8 @@ import string
 import random
 
 def password_generator(n):
-    symbols = list(string.digits + string.ascii_letters + string.punctuation)
-    password = ''
     while 1:
+        password = ''
         for i in range(n):
-            password += random.choice(symbols)
+            password += random.choice(string.digits + string.ascii_letters)
         yield password
